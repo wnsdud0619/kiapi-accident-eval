@@ -1,0 +1,42 @@
+# Python / OS / IDE
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+
+# 데이터 · 문서 · 발표자료 · 이미지 (S/W 실행 외 파일 제외)
+*.csv
+*.xlsx
+*.pptx
+*.pdf
+*.hwp
+*.hwpx
+*.docx
+*.md
+!README.md
+*.txt
+!requirements.txt
+*.png
+!PNG/Wordmark.png
+*.jpg
+*.jpeg
+*.svg
+*.html
+
+# 작업용 보조 디렉터리 및 예시/캡처 스크립트
+generated_charts/
+generated_crops/
+표_이미지/
+한글붙여넣기/
+build_deck.py
+capture_selenium.py
+crop_ui.py
+extract_datasets.py
+generate_charts.py
+take_screenshot.py
+test_markers.py
