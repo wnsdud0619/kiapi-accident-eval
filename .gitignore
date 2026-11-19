@@ -33,6 +33,11 @@ generated_charts/
 generated_crops/
 표_이미지/
 한글붙여넣기/
+build/
+dist/
+*.spec
+*.exe
+*.zip
 build_deck.py
 capture_selenium.py
 crop_ui.py

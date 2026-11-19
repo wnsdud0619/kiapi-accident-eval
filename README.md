@@ -5,6 +5,7 @@
 ## 구성 파일
 
 - `app.py`: Streamlit 웹 UI 및 정합·평가 지표 연산 코드
+- `run_app.py`: 주소창 없는 앱 창 실행 런처 (단일 `.exe` 패키징 진입점 겸용)
 - `PNG/Wordmark.png`: 상단 헤더 로고 이미지
 - `requirements.txt`: 실행에 필요한 Python 패키지 목록
 
@@ -13,6 +14,20 @@
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+# 또는 주소창 없는 앱 창으로 실행:
+python run_app.py
+```
+
+## Windows 단일 실행 파일(`.exe`) 빌드 방법
+
+```bash
+pip install pyinstaller
+pyinstaller --noconfirm --clean --onefile --windowed --name "사고재현_검증플랫폼" ^
+  --add-data "app.py;." --add-data "PNG\Wordmark.png;PNG" ^
+  --collect-all streamlit --collect-data plotly ^
+  --copy-metadata streamlit --copy-metadata plotly --copy-metadata pandas ^
+  --copy-metadata numpy --copy-metadata altair --copy-metadata pyarrow ^
+  --copy-metadata packaging run_app.py
 ```
 
 ## 주요 기능
