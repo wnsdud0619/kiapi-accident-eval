@@ -38,16 +38,6 @@ Python이나 별도 라이브러리가 설치되어 있지 않은 다른 Windows
 | `tesla_model_y_DrivingPath_*.csv` | **재현 S/W 위치·궤적** | `frame`, `time(s)`(20ms, 50 Hz), `gnss_src_x(m)`, `gnss_src_y(m)`, `gnss_x(m)`, `gnss_y(m)`, `simulationPosition`, `simulationAngle` | 앱 기본 위치 컬럼으로 `gnss_src_x(m)`, `gnss_src_y(m)` 사용 |
 | `tesla_model_y_Essentials_*.csv` | **재현 S/W 속도·상태** | `frame`, `time(s)`(20ms, 50 Hz), `Speed(km/h)`, `RPM(rpm)`, `Gear()`, `Throttle(%)`, `Brake(%)`, `Steering(rad)` | `DrivingPath` 파일과 `frame` 기준으로 자동 병합 |
 
-### 시나리오 1~5 데이터 요약
-
-| 시나리오 | 기준 데이터 (`3_*_Car_1.csv`) | 재현 위치 (`DrivingPath`) | 재현 속도 (`Essentials`) | 특징 |
-| :--- | :--- | :--- | :--- | :--- |
-| **시나리오 1** | `3_1_Car_1.csv`<br>2,654행 · `27.85~41.12s` · GNSS 133점 · `0.0~29.2 km/h` | `tesla_model_y_DrivingPath_2026-11-02_10-01-11.csv`<br>664행 · `0.00~13.26s` | `tesla_model_y_Essentials_2026-11-02_10-01-17.csv`<br>664행 · `0.00~13.26s` · `-0.2~29.2 km/h` | |
-| **시나리오 2** | `3_2_Car_1.csv`<br>1,921행 · `17.00~26.60s` · GNSS 97점 · `39.6~45.4 km/h` | `tesla_model_y_DrivingPath_2026-11-02_10-09-18.csv`<br>571행 · `0.00~11.40s` | `tesla_model_y_Essentials_2026-11-02_10-06-23.csv`<br>587행 · `0.00~11.72s` · `0.5~45.8 km/h` | 위치(571행)·속도(587행) 길이 차이 (`outer` 병합) |
-| **시나리오 3** | `3_3_Car_1.csv`<br>1,434행 · `49.50~56.66s` · GNSS 72점 · `42.9~49.9 km/h` | `tesla_model_y_DrivingPath_2026-11-02_10-18-06.csv`<br>399행 · `0.00~7.96s` | `tesla_model_y_Essentials_2026-11-02_10-18-17.csv`<br>399행 · `0.00~7.96s` · `-1.5~48.4 km/h` | |
-| **시나리오 4** | `3_4_Car_1.csv`<br>2,701행 · `14.00~27.50s` · GNSS 136점 · `0.0~52.5 km/h` | `tesla_model_y_DrivingPath_2026-11-02_10-21-45.csv`<br>676행 · `0.00~13.50s` | `tesla_model_y_Essentials_2026-11-02_10-21-37.csv`<br>676행 · `0.00~13.50s` · `-0.2~51.0 km/h` | |
-| **시나리오 5** | `3_5_Car_1.csv`<br>2,771행 · `29.15~43.00s` · GNSS 139점 · `0.0~74.2 km/h` | `tesla_model_y_DrivingPath_2026-11-05_18-15-42.csv`<br>693행 · `0.00~13.84s` | `tesla_model_y_Essentials_2026-11-05_18-15-31.csv`<br>693행 · `0.00~13.84s` · `-0.2~64.4 km/h` | |
-
 ### 앱에서 시나리오 데이터 불러오기
 
 1. 앱 좌측 **`1. 데이터 및 프로세스 제어`** 영역에서 **`▶ 기준 데이터 (DSSAD/EDR)`** 업로더에 시나리오 폴더의 `3_<N>_Car_1.csv` 파일을 업로드합니다.
