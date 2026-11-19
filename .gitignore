@@ -11,6 +11,9 @@ Thumbs.db
 
 # 데이터 · 문서 · 발표자료 · 이미지 (S/W 실행 외 파일 제외)
 *.csv
+!test_data/
+!test_data/*/
+!test_data/**/*.csv
 *.xlsx
 *.pptx
 *.pdf

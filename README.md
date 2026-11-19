@@ -8,6 +8,13 @@
 - `run_app.py`: 주소창 없는 앱 창 실행 런처 (단일 `.exe` 패키징 진입점 겸용)
 - `PNG/Wordmark.png`: 상단 헤더 로고 이미지
 - `requirements.txt`: 실행에 필요한 Python 패키지 목록
+- `test_data/시나리오 1~5/`: 시나리오별 시험용 기준(DSSAD)·재현 결과(위치/속도) CSV 데이터셋
+
+## Windows 단일 실행 파일(`.exe`) 다운로드
+
+Python 설치 없이 바로 실행할 수 있는 `사고재현_검증플랫폼.exe`(108.75 MiB, GitHub 일반 파일 100 MiB 제한으로 Releases에 업로드)는 아래 페이지에서 받을 수 있습니다.
+
+- [Releases 페이지](https://github.com/wnsdud0619/kiapi-accident-eval/releases)
 
 ## 설치 및 실행
 
